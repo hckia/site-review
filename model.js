@@ -11,7 +11,7 @@ const userSchema = mongoose.Schema({
   password: {type: String, required: true}
 });
 
-/* In regards to the votes Array of Objects... Not sure if this is needed since its not referenced anywhere */
+/* This was an example of the vote schema below. It would be an array of objects referenced in review schema */
 /*votes[{
   user: user_id,
   value: [-1,1]
