@@ -35,3 +35,9 @@ const siteSchema = mongoose.Schema({
   url: {type: String, required: true},
   description: {type: String, required: true}
 });
+
+const vote = require('vote', voteSchema);
+const review = require('review', reviewSchema);
+const site = require('site', siteSchema);
+
+module.export = {vote review site};
