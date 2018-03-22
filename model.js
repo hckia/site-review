@@ -37,7 +37,6 @@ const siteSchema = mongoose.Schema({
   description: {type: String, required: true}
 });
 
-const Vote = mongoose.mMdel('Vote', voteSchema);
 const Review = mongoose.Model('Review', reviewSchema);
 const Site = mongoose.Model('Site', siteSchema);
 
