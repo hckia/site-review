@@ -37,8 +37,8 @@ const siteSchema = mongoose.Schema({
   description: {type: String, required: true}
 });
 
-const vote = mongoose.model('vote', voteSchema);
-const review = mongoose.model('review', reviewSchema);
-const site = mongoose.model('site', siteSchema);
+const Vote = mongoose.mMdel('Vote', voteSchema);
+const Review = mongoose.Model('Review', reviewSchema);
+const Site = mongoose.Model('Site', siteSchema);
 
-module.export = {voteSchema review site};
+module.export = {voteSchema, Review, Site};
