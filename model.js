@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.Types.ObjectId;
 mongoose.Promise = global.Promise;
 
 const userSchema = mongoose.Schema({
@@ -36,8 +37,8 @@ const siteSchema = mongoose.Schema({
   description: {type: String, required: true}
 });
 
-const vote = require('vote', voteSchema);
-const review = require('review', reviewSchema);
-const site = require('site', siteSchema);
+const vote = mongoose.model('vote', voteSchema);
+const review = mongoose.model('review', reviewSchema);
+const site = mongoose.model('site', siteSchema);
 
-module.export = {vote review site};
+module.export = {voteSchema review site};
