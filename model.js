@@ -34,7 +34,8 @@ const reviewSchema = mongoose.Schema({
 
 const siteSchema = mongoose.Schema({
   url: {type: String, required: true},
-  description: {type: String, required: true}
+  description: {type: String, required: true},
+  reviews: [{type: ObjectId, ref:'Review', required: false}]
 });
 
 const Review = mongoose.Model('Review', reviewSchema);
